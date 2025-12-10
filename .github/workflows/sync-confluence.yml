@@ -1,0 +1,26 @@
+name: Sync Confluence to Markdown
+on:
+  schedule:
+    - cron: '0 0 * * *' # Запуск щодня опівночі
+  workflow_dispatch: # Можливість запустити вручну
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+      - name: Export Confluence to Markdown
+        uses: Spenhouet/confluence-markdown-exporter@v1 # Або інший готовий action/скрипт
+        with:
+          confluence_url: 'https://geo2.atlassian.net'
+          confluence_user: ${{ secrets.CONFLUENCE_USER }}
+          confluence_token: ${{ secrets.CONFLUENCE_TOKEN }}
+          space_key: 'BALDEVGEO'
+          output_dir: './docs'
+      - name: Commit and Push changes
+        run: |
+          git config --global user.name 'Confluence Sync Bot'
+          git config --global user.email 'bot@noreply.github.com'
+          git add ./docs
+          git commit -m "Update documentation from Confluence" || echo "No changes to commit"
+          git push
