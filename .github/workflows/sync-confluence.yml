@@ -37,7 +37,7 @@ jobs:
           mkdir -p ./docs
           
           # Run the exporter
-          confluence-markdown-exporter spaces "BALDEVGEO" "./"
+          confluence-markdown-exporter spaces "BALDEVGEO" "./docs"
 
       - name: Commit and Push changes
         run: |
