@@ -40,6 +40,9 @@ jobs:
                   username: $user,
                   api_token: $token
                 }
+              },
+              export: {
+                output_path: "./docs"
               }
             }' > config.json
           
@@ -47,8 +50,9 @@ jobs:
           mkdir -p ./docs
           
           # Run the exporter with custom config path
+          # Usage: confluence-markdown-exporter spaces <SPACE_KEY> (output path is in config)
           export CME_CONFIG_PATH=$(pwd)/config.json
-          confluence-markdown-exporter spaces "BALDEVGEO" ./docs
+          confluence-markdown-exporter spaces "BALDEVGEO"
           
           # Cleanup config file to avoid leaking secrets (though runner cleans up anyway)
           rm config.json
