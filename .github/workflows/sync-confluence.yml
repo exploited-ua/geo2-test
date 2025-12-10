@@ -28,16 +28,27 @@ jobs:
           CONFLUENCE_USER: ${{ secrets.CONFLUENCE_USER }}
           CONFLUENCE_TOKEN: ${{ secrets.CONFLUENCE_TOKEN }}
         run: |
-          # Create .env file for the exporter to read
-          echo "ATLASSIAN_URL=https://geo2.atlassian.net" > .env
-          echo "ATLASSIAN_USERNAME=$CONFLUENCE_USER" >> .env
-          echo "ATLASSIAN_API_TOKEN=$CONFLUENCE_TOKEN" >> .env
+          # Create JSON config file for the exporter
+          echo '{
+            "auth": {
+              "confluence": {
+                "url": "https://geo2.atlassian.net",
+                "username": "'"$CONFLUENCE_USER"'",
+                "api_token": "'"$CONFLUENCE_TOKEN"'"
+              }
+            }
+          }' > config.json
           
           # Ensure output directory exists
           mkdir -p ./docs
           
-          # Run the exporter
+          # Run the exporter with custom config path
+          # Usage: confluence-markdown-exporter spaces <SPACE_KEY> <OUTPUT_PATH>
+          export CME_CONFIG_PATH=$(pwd)/config.json
           confluence-markdown-exporter spaces "BALDEVGEO" "./docs"
+          
+          # Cleanup config file to avoid leaking secrets (though runner cleans up anyway)
+          rm config.json
 
       - name: Commit and Push changes
         run: |
