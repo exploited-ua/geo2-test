@@ -1,26 +1,57 @@
 name: Sync Confluence to Markdown
+
 on:
   schedule:
-    - cron: '0 0 * * *' # Запуск щодня опівночі
-  workflow_dispatch: # Можливість запустити вручну
+    - cron: '0 0 * * *' # Every day at midnight
+  workflow_dispatch: # Allow manual trigger
+
 jobs:
   sync:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write # Important: allows the action to push changes
+
     steps:
       - name: Checkout repository
         uses: actions/checkout@v3
-      - name: Export Confluence to Markdown
-        uses: Spenhouet/confluence-markdown-exporter
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
         with:
-          confluence_url: 'https://geo2.atlassian.net'
-          confluence_user: ${{ secrets.CONFLUENCE_USER }}
-          confluence_token: ${{ secrets.CONFLUENCE_TOKEN }}
-          space_key: 'BALDEVGEO'
-          output_dir: './docs'
+          python-version: '3.x'
+
+      - name: Install Confluence Exporter
+        run: pip install confluence-markdown-exporter
+
+      - name: Export Confluence to Markdown
+        env:
+          CONFLUENCE_URL: 'https://geo2.atlassian.net'
+          CONFLUENCE_USER: ${{ secrets.CONFLUENCE_USER }}
+          CONFLUENCE_TOKEN: ${{ secrets.CONFLUENCE_TOKEN }}
+          SPACE_KEY: 'BALDEVGEO'
+          OUTPUT_DIR: './docs'
+        run: |
+          # The tool takes arguments as: confluence-markdown-exporter [options] content_id_or_space_key output_path
+          # Note: The command name might vary depending on the package, usually it's `confluence-markdown-exporter` or `cf-export`
+          # Verifying the command from the PyPI documentation: `confluence-markdown-exporter`
+          
+          confluence-markdown-exporter --url "$CONFLUENCE_URL" --user "$CONFLUENCE_USER" --token "$CONFLUENCE_TOKEN" "$SPACE_KEY" "$OUTPUT_DIR"
+
       - name: Commit and Push changes
         run: |
           git config --global user.name 'Confluence Sync Bot'
           git config --global user.email 'bot@noreply.github.com'
-          git add ./docs
-          git commit -m "Update documentation from Confluence" || echo "No changes to commit"
-          git push
+          
+          # Check if there are changes
+          if [ -d "./docs" ]; then
+            git add ./docs
+            if ! git diff-index --quiet HEAD; then
+              git commit -m "docs: sync from Confluence [skip ci]"
+              git push
+            else
+              echo "No changes to commit."
+            fi
+          else
+             echo "Output directory ./docs was not created. Check exporter logs."
+             exit 1
+          fi
