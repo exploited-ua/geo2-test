@@ -130,4 +130,4 @@ Learn about the new features of each new release. This is useful for the evaluat
 - [Release Notes 3.7.2](Release%20Notes/Release%20Notes%203.7.2.md)
 - [Release Notes 3.7.3](Release%20Notes/Release%20Notes%203.7.3.md)
 - [Release Notes 3.7.4](Release%20Notes/Release%20Notes%203.7.4.md)
-- [Release Notes 4.0 (Hub: pending)](Release%20Notes/Release%20Notes%204.0%20(Hub_%20pending).md)
+- [Release Notes 4.0](Release%20Notes/Release%20Notes%204.0.md)

@@ -24,7 +24,7 @@ After signing in successfully, you will see the Map page. You may receive invita
 
 # Plan Route
 
-On Map page, by clicking the `Plan route` button, you can choose to create a route if you have permission to do it.  Check more details about [Mobile App: Routes and Orders](Mobile%20App_%20Routes%20and%20Orders.md).
+On Map page, by clicking the `Plan route` button, you can choose to create a route if you have permission to do it.  Check more details about [Mobile App: Routes and Stops](Mobile%20App_%20Routes%20and%20Stops.md).
 
 ![App 16.png](../../attachments/76d7fde5-dc81-4d37-9422-c1e6676fd732.png)![App 22.png](../../attachments/88e5e829-3556-47e7-bee3-00571600afb2.png)
 
@@ -54,10 +54,12 @@ Press the `menu` icon at the top-left corner to open the menu. If you have permi
 - Configure settings
 - Change organization and environment if you have multiple
 
+Check more details about [Mobile App: Menu](Mobile%20App_%20Menu.md).
+
 ![App 23.png](../../attachments/61ac60de-63ca-4948-b066-a647a64110ac.png)![App 24.png](../../attachments/bbab94fa-b2a6-473d-979b-92867244ad5d.png)
 
 # Routes Calendar
 
-Press the `route` icon to open Routes Calendar page. It lets you view routes that have been released to you.  By default, routes planned for the current date are shown, but you can select other dates to show routes for those dates.  The green dot below the date means that you have planned routes assigned to you for this date.  Learn more about [Mobile App: Routes and Orders](Mobile%20App_%20Routes%20and%20Orders.md).
+Press the `route` icon to open Routes Calendar page. It lets you view routes that have been released to you.  By default, routes planned for the current date are shown, but you can select other dates to show routes for those dates.  The green dot below the date means that you have planned routes assigned to you for this date.  Learn more about [Mobile App: Routes and Stops](Mobile%20App_%20Routes%20and%20Stops.md).
 
 ![App 25.png](../../attachments/823b3bd1-0d23-442a-a626-0b65e4767e52.png)
