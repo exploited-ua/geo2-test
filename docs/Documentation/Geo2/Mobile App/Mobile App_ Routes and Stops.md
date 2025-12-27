@@ -14,18 +14,18 @@
   - [Stop details](#stop-details)
   - [Add Existing Order](#add-existing-order)
 - [Adding/Displaying Breaks](#adding-displaying-breaks)
-- [Drag-and-Drop Orders](#drag-and-drop-orders)
+- [Drag-and-Drop Stops](#drag-and-drop-stops)
 - [Calibrating Route](#calibrating-route)
 - [Optimizing Route with Time Windows](#optimizing-route-with-time-windows)
 - [Optimizing Route without Time Windows](#optimizing-route-without-time-windows)
 - [Editing and Deleting Route](#editing-and-deleting-route)
-- [Editing and Deleting Order](#editing-and-deleting-order)
+- [Editing and Deleting Stop](#editing-and-deleting-stop)
 - [Vehicle Loading with Photos](#vehicle-loading-with-photos)
 - [Navigation](#navigation)
 - [Switching Between Stops](#switching-between-stops)
-- [Order Packages](#order-packages)
-- [Order Products](#order-products)
-- [Order Packages with Products](#order-packages-with-products)
+- [Stop Packages](#stop-packages)
+- [Stop Products](#stop-products)
+- [Stop Packages with Products](#stop-packages-with-products)
 - [Recording Stop Duration](#recording-stop-duration)
 
 # Introduction
@@ -151,172 +151,189 @@ After adding all stops to the route, you need to press the `Done` button at the 
 
 The route view shows breaks alongside order stops. With the required permission in the environment, you can add a break to a route in the mobile app as well as in Geo2 Hub.
 
-To add a break, press the `Actions` button and select the `Add break` option.  You will see a prompt to specify a break in minutes.  By pressing the `Add break` button, it will be added to the end of the stop list.  The break can be dragged-and-dropped to any position in the route. Press `Save` to save changes.  The route will be automatically calibrated, taking new breaks into account.
+To add a break, press the `Add break` button at the top of the stop list.  This button is only available when at least 1 stop is added to the route. You will see a prompt to specify a break in minutes.  By pressing the `Add` button, it will be added to the end of the stop list.  The break can be dragged-and-dropped to any position in the route. The route will be automatically calibrated, taking new breaks into account.
 
-![Routes mob 24.png](../../attachments/a84a46bb-ee62-4e93-ab3c-a088dce5ad98.png)![Routes mob 23.png](../../attachments/d07c9665-4587-4cb6-b964-ee68811018fd.png)![Routes mob 25.png](../../attachments/adc75b2f-ac80-48ba-a981-e4fb8382fb06.png)![Routes mob 27.png](../../attachments/e40c4f0e-c89c-4cfd-bece-651aaf9ba495.png)![Routes mob 28.png](../../attachments/fbe0a309-67f8-4df8-96c9-d9fff337157d.png)![Routes mob 29.png](../../attachments/fe7d8bc5-a35f-4258-8634-a0dee2dcafa0.png)![Routes mob 30.png](../../attachments/797ac390-ac54-46b5-8916-7c1fb077b0ee.png)![Routes mob 31.png](../../attachments/febd814d-46d1-459a-9309-f4aae9e581fb.png)![Routes mob 32.png](../../attachments/5e0f1471-7ffb-4de3-bff7-77f2112d452c.png)![Routes mob 33.png](../../attachments/45fc6611-2a0a-43cb-b5a6-3fda24d70f96.png)
+![App 84.png](../../attachments/1bc737e9-d1a9-4ef4-b2ac-a84b9b9f3f23.png)![App 85.png](../../attachments/ff1090c3-68d8-41c5-ba90-1521fb876143.png)![App 86.png](../../attachments/684788fd-d290-4eaa-b5a4-47aaeb81f28d.png)![App 87.png](../../attachments/9f86f945-e189-4abf-a9ea-b04199f64cfe.png)![App 88.png](../../attachments/d14f2e40-e974-46fb-85fb-04ea8bb7c7cb.png)![App 89.png](../../attachments/6df2256d-47d7-4124-a439-be4471abfa1a.png)
 
-# Drag-and-Drop Orders
+# Drag-and-Drop Stops
 
-Order (stop) cards could be drag-and-dropped to any position of the route.  For it, you need to press on the order card and move it.  Remember to press the `Save` button to save your changes.  Once saved, a route will be automatically calibrated updating timings and distance.
+Stop cards could be drag-and-dropped to any position of the route.  For it, you need to press on the stop card and move it.  Remember to press the `Save` button to save your changes.  Once saved, a route will be automatically calibrated updating timings and distance.
 
 Route start and end cards cannot be moved.
 
-![Routes mob 34.png](../../attachments/727091ca-6409-488f-9778-05754cf56da8.png)![Routes mob 35.png](../../attachments/0933e593-1b50-4521-b039-8cddea694dd3.png)![Routes mob 36.png](../../attachments/8668f5e0-6985-45f6-8322-255a401d3d44.png)![Routes mob 37.png](../../attachments/fdea1d4c-e14d-46f6-a906-fb232255c375.png)
+![App 90.png](../../attachments/1a94b2ea-c95b-48f1-b4e6-0d96a892aca0.png)![App 91.png](../../attachments/c6775c87-aa45-4210-aa78-69935aca461b.png)![App 92.png](../../attachments/4a313765-05c2-4ca0-9c16-a0bcd0cb0912.png)
 
 # Calibrating Route
 
-When you press the `Calibrate` button, the planned timings and distance of the route will be calculated without modifying the order list.  Example: We created 4 orders one by one, didn't change their position, and clicked on the `Calibrate` button.  The route didn't change but the planned time changed.  Remember to press the `Save` button to save these changes. 
+Once stops are added to a route, we run automatic route optimization and calibration so you can choose the fastest and/or shortest route. You can also press the `Actions` (arrow) button and select `Calibrate` option to update the planned timings and distance of the route without modifying the order list.  Example: You created 4 stops one by one, didn't change their position, and clicked on the `Calibrate` button.  The route didn't change but the planned time changed.  Changes are saved automatically.
 
 The Calibrate option is available if a route has at least 1 order. 
 
 Before route calibration:
 
-![Routes mob 38.png](../../attachments/5ee38bf3-4046-4691-a9d3-b420a6c4f448.png)
+![App 93.png](../../attachments/14814784-6371-4c91-b2ad-ef34137fe402.png)
 
 After route calibration:
 
-![Routes mob 39.png](../../attachments/00a2ad60-fe70-4fe8-bfcd-3d4a243ab68a.png)
+![App 94.png](../../attachments/3e558106-c13c-4c55-8b50-b78938444bdf.png)
 
 We apply automatic calibration in most cases so you don't need to press `Calibrate`:
 
-- removing orders from a route and pressing `Save`
-- adding, changing, deleting a break inside a route and pressing on `Save` if there is at least 1 order
+- removing stops from a route and pressing `Save`
+- adding, changing, deleting a break inside a route
 - changing (shuffling) stop order inside a route and pressing on `Save`
-- changing start and end points in a route if there is at least 1 order
-- changing route planned start time if there is at least 1 order
-- changing vehicle in a route if there is at least 1 order
+- changing start and end points in a route if there is at least 1 stops
+- changing route planned start time if there is at least 1 stop
+- changing vehicle in a route if there is at least 1 stop
 - changing time-at-stop inside order or route stops
 
 Exceptions when we don't apply automatic calibration: 
 
-- adding orders in a route
-- editing an order (editing consignee address inside orders)
-- manually set up a route inside an order (done from Hub)
-- deleting an order on Order details page
+- editing a stop (editing recipient address inside stops)
+- manually set up a route inside a stop (done from Hub)
+- deleting an order on Stop details page
 - making changes in a depot address or vehicle speed factor
+
+If the route already calibrated, the Calibrate button will be disabled.
+
+![App 95.png](../../attachments/e6a4955c-177d-4b54-9e85-f3caf0edceab.png)
 
 # Optimizing Route with Time Windows
 
-To use the Optimize with time windows option, press the `Actions` button and choose the `Optimize with time windows` option. Route optimization is available when a route has at least 2 orders. Among these orders, there has to be at least 1 order with the provided required time slots (either “Required from”, or “Required to”, or both of them).
+After adding stops to a route, we run automatic route optimization and calibration so you can select the fastest or shortest route. If the route includes at least one stop with specified Required from and/or Required to fields and you have an Advanced or Enterprise subscription, the system optimizes the route with time windows. To use the Optimize with time windows option separately, press the `Actions` (arrow) button and select the `Optimize with time windows` option. Route optimization requires at least two stops, with at least one stop having specified required time slots (either “Required from”, “Required to”, or both).
 
-![Routes mob 40.png](../../attachments/de4b2f3f-dd5f-4e34-8322-e2d205028369.png)
+![App 96.png](../../attachments/8220864e-87da-4f14-9f1a-fb5b46a0b916.png)
 
-When you press `Optimize with time windows`, the geo-locations of the assigned depot and the orders will be used to suggest an optimum driving route as well as to match the required time windows for each order. The time window specified using the `Required from` and `Required to` fields inside an order is not considered a hard constraint by the system. That is, the system doesn't fail if the stop cannot be visited during the time window; instead, the system tries to find a route that visits the stop during its time window, but if time-window violations are inevitable, the system tries to find a solution that minimizes the time-window violation time for all stops in the problem.
+When you press `Optimize with time windows`, the geo-locations of the assigned route start point and the stops will be used to suggest an optimum driving route as well as to match the required time windows for each stop. The time window specified using the `Required from` and `Required to` fields inside a stop is not considered a hard constraint by the system. That is, the system doesn't fail if the stop cannot be visited during the time window; instead, the system tries to find a route that visits the stop during its time window, but if time-window violations are inevitable, the system tries to find a solution that minimizes the time-window violation time for all stops in the problem.
 
 If you have provided vehicle dimensions (“Gross weight”, “Height”, “Width”, and “Length” fields) for the vehicle assigned to the route, it will be used for optimization with vehicle restrictions. The system will factor these dimensions into route building to generate the most efficient outcomes, for example, to avoid bridges with height restrictions, narrow roads unsuitable for wider vehicles, or areas with weight limits that could affect the selected route.
 
-You are not obliged to accept the suggested order but to save changes, remember to press the `Save` button.
+Changes are saved automatically.
 
 Before route optimization:
 
-![Routes mob 43.png](../../attachments/76d351c4-af13-4a95-88ec-d66db947ae6a.png)![Routes mob 44.png](../../attachments/3430f88c-86b0-48ec-a61b-2507b34ed90d.png)
+![App 97.png](../../attachments/c01322a8-c4cc-47b7-ae94-5c596576aedf.png)![App 98.png](../../attachments/90162971-de95-46f3-884f-4ba38d0803ae.png)
 
 After route optimization with time windows:
 
-![Routes mob 45.png](../../attachments/f29eb78b-09d6-4cf9-b12c-5ded325c365f.png)![Routes mob 46.png](../../attachments/c1141f3c-e8f1-4ae5-bca1-36e1a9e75361.png)![Routes mob 47.png](../../attachments/f97d38f1-770c-45d0-8ff5-a8c6905620f8.png)
+![App 99.png](../../attachments/a03843e2-071b-4c86-ab07-66c469b9a786.png)![App 100.png](../../attachments/e79fd886-b3ec-4f8a-a2ae-3ed35d6b8793.png)
+
+If the route is already optimized with time windows, the Optimize button will be disabled.
+
+![App 101.png](../../attachments/4d483b54-c365-4262-937f-366f9b57cae3.png)
 
 # Optimizing Route without Time Windows
 
-To use the Optimize without time windows option, press the `Actions` button and choose the `Optimize without time windows` option.  Route optimization is available when a route has at least 2 orders.
+After adding stops to a route, we run automatic route optimization and calibration so you can select the fastest or shortest route. If stops lack required time windows ("Required from" and/or "Required to" fields), the system optimizes without time windows. To use the Optimize without time windows option separately, press the `Actions` (arrow) button and select the `Optimize without time windows` option.
 
-![Routes mob 40.png](../../attachments/de4b2f3f-dd5f-4e34-8322-e2d205028369.png)
+Route optimization is available when a route has at least two orders.
 
-When you press `Optimize without time windows`, the geo-locations of the assigned depot and the orders will be used to suggest an optimum driving route.  The order of the orders may be changed and the planned timings and distance of the route updated.  If you have provided vehicle dimensions (“Gross weight”, “Height”, “Width”, and “Length” fields) for the vehicle assigned to the route, it will be used for optimization with vehicle restrictions. The system will factor these dimensions into route building to generate the most efficient outcomes, for example, to avoid bridges with height restrictions, narrow roads unsuitable for wider vehicles, or areas with weight limits that could affect the selected route.
+![App 103.png](../../attachments/aabd5e63-54bc-45c4-83e4-6f96c68053a5.png)
 
-You are not obliged to accept the suggested order but to save changes, remember to press the `Save` button.
+When you press `Optimize without time windows`, the geo-locations of the assigned route start location and the stops will be used to suggest an optimum driving route.  The order of the stops may be changed and the planned timings and distance of the route updated.  If you have provided vehicle dimensions (“Gross weight”, “Height”, “Width”, and “Length” fields) for the vehicle assigned to the route, it will be used for optimization with vehicle restrictions. The system will factor these dimensions into route building to generate the most efficient outcomes, for example, to avoid bridges with height restrictions, narrow roads unsuitable for wider vehicles, or areas with weight limits that could affect the selected route.
+
+Changes will be saved automatically.
 
 Before optimization without time windows:
 
-![Routes mob 41.png](../../attachments/54063a32-84f6-4267-bc75-8206a389410f.png)
+![App 102.png](../../attachments/9a540083-e2ab-489f-81cf-2137cdb38039.png)
 
 After optimization without time windows:
 
-![Routes mob 42.png](../../attachments/b9460418-87b1-4c7d-b813-e95b08f087ef.png)
+![App 104.png](../../attachments/23326a34-906a-4ab3-8194-f2861a37dca8.png)
+
+If the route is already optimized without time windows, the Optimize button will be disabled.
+
+![App 105.png](../../attachments/1008e5b7-93d3-4310-83c5-755b887d616c.png)
 
 # Editing and Deleting Route
 
-By swiping left over a route or using a long press, you can also press the `More` button to open the dialog with the following options: Edit, Delete, and Select multiple routes.  You can create, edit, and delete routes only if you have permission to do it - Manager or Admin role in the current environment.
+By pressing `3 dots` icon on a route card on Routes page, the dialog will be opened with the following options: Edit, Delete, and Select routes for bulk route deletion.  You can create, edit, and delete routes only if you have permission to do it - Manager or Admin role in the current environment.
 
-![Routes mob 60.png](../../attachments/a0656168-4fa3-4711-b357-362d801239de.png)![Routes mob 61.png](../../attachments/1041b47e-1480-4918-80b7-d38b82b7ef2a.png)![Routes mob 62.png](../../attachments/64135e69-3510-484b-af81-18fb5619fe1e.png)
+![App 106.png](../../attachments/93d484e1-e4c7-498a-ac82-ba20e3056791.png)
 
-You can also click on the `Actions` button on the Route view page and select the `Edit route` or `Delete route` option.
+You can also click on the `3 dots` icon on the Route view page and select the `Edit route` or `Delete route` option.
 
-![Routes mob 63.png](../../attachments/064c05d1-e35d-49b3-94fe-499db661e893.png)
+![App 107.png](../../attachments/26ed8321-f871-401b-9e65-b3010615ec83.png)
 
 After clicking on the `Edit` button, you will be redirected to Edit route page where you can change some route details and save changes.
 
 After clicking on the `Delete` button, the confirmation dialog will be displayed where you need to confirm the deletion of the route.  It's not possible to delete the route that has the Started or Completed status. 
 
-# Editing and Deleting Order
+# Editing and Deleting Stop
 
-To edit or permanently delete an order, you need to go to the Route view page and click on the order (stop) card.  You will be redirected to Details page.  At the bottom of the page, you will see the `Edit` and `Delete` buttons.  After clicking on the `Edit` button, you will be redirected to Edit order page where you can make some changes and save them.  After clicking on the `Delete` button, the confirmation dialog will be displayed where you need to confirm the deletion of the order. 
+To edit or permanently delete a stop, you need to go to the Route view page and click on the stop card.  You will be redirected to Details page.  At the bottom of the page, you will see the `Edit` and `Delete stop` buttons.  After clicking on the `Edit` button, you will be redirected to Edit stop page where you can make some changes and save them.  After clicking on the `Delete` button, the confirmation dialog will be displayed where you need to confirm the deletion of the stop. 
 
-![Routes mob 64.png](../../attachments/9ebc60cb-c273-474e-8e31-6b1a3368a595.png)![Routes mob 65.png](../../attachments/76891f06-c3a6-433f-8637-3ce2ff76cce3.png)
+![App 108.png](../../attachments/8a61c9a4-0da7-4d7e-a093-d1d11537eae4.png)![App 109.png](../../attachments/d670331b-4433-4488-bf42-e2761fa76ea1.png)
 
-For selecting multiple orders, you need to press the `Actions` button and choose the `Select stops` option.  You can remove them from a route (orders will not be permanently deleted) or create one POD for multiple orders.  If your environment settings don't allow multiple POD's per order per route, it is not possible to select the orders that already have POD's because you can not delete them or create a new POD.
+To select multiple stops, press the `Actions` (arrow) button on the Route view page and choose the `Select stops` option. You can remove stops from a route (stops remain available to add to another route) or create one POD for multiple stops. If your environment settings disallow multiple PODs per order per route, you cannot select stops with existing PODs because you cannot create a new POD.
 
-![Routes mob 66.png](../../attachments/89abb22d-f88c-4b16-9f6d-0b83786f28fe.png)![Routes mob 67.png](../../attachments/94ac438e-831b-439b-9541-ba7fc10db3da.png)![Routes mob 68.png](../../attachments/2d49aedf-4842-4186-b1a8-735bba43af4d.png)
+![App 110.png](../../attachments/842eba08-4130-4678-8a15-15471e3d9628.png)![App 111.png](../../attachments/9f5b7f12-b5c3-4c78-8789-8ba6f47af7bd.png)![App 112.png](../../attachments/02b96c99-aa2e-4422-bb9a-94c4779e9b62.png)
 
 # Vehicle Loading with Photos
 
-Once a route is optimized and ready-to-go, you can load your vehicle with the assigned delivery orders by selecting `Load vehicle` from the `Actions` button on Route view page. Stops appear in reverse order to help you load items that will be delivered last first, with **collection orders excluded**. For each stop, you can set parcel placement (e.g., "front right" or "left shelf") and optionally add photos. Press `Done` to save the placement, which can be updated later. Note that new photos will replace the old ones. Once your orders are loaded to the vehicle, press `Finish loading` to return to Route view page.
+Once a route is optimized and ready-to-go, you can load your vehicle with the assigned delivery stops by selecting `Load vehicle` from the `Actions` (arrow) button on Route view page. Stops appear in reverse order to help you load items that will be delivered last first, with **collection orders excluded**. For each stop, you can set parcel placement (e.g., "front right" or "left shelf") and optionally add photos. Press `Confirm` to save the placement, which can be updated later. Note that new photos will replace the old ones. Once your orders are loaded to the vehicle, press `Finish loading` to return to Route view page.
 
-![Routes mob 72.png](../../attachments/d06d1a30-1aa0-4376-9f3a-c7a4a8c59253.png)![Routes mob 73.png](../../attachments/cdc3fab6-e90c-4b47-b30c-a108d0f68c96.png)![Routes mob 74.png](../../attachments/59597604-5abe-4565-af84-101fe36187d4.png)![Routes mob 75.png](../../attachments/4573e280-f6f4-47cf-8c56-93e397076f91.png)![Routes mob 76.png](../../attachments/f1862d98-fafa-49a0-96db-606f067f3a2d.png)
+![App 113.png](../../attachments/a356174d-3fba-42c3-8f28-e1b6855c9715.png)![App 114.png](../../attachments/2b50d592-f7cd-4906-9fff-f201798a8157.png)![App 116.png](../../attachments/9f1f26a0-4a90-4da0-b7ba-4a549d397c34.png)![App 115.png](../../attachments/ab3bead9-fbb0-4129-bb63-3cb9c6d86ea0.png)![App 117.png](../../attachments/330e3896-fcbf-4286-a930-f412948249e2.png)![App 118.png](../../attachments/8e4b5037-62b3-4b64-bd35-1ffcb3d2bd16.png)
 
 The placement and photo count appear on the stop card, and full-size photos can be viewed in the Order details page.
 
-![Routes mob 77.png](../../attachments/1903f5ba-20d8-4a75-9216-e0592ffca18e.png)![Routes mob 78.png](../../attachments/781a5f20-942a-43e0-a706-ed7a28edec84.png)
+![App 119.png](../../attachments/cd1a38cd-cc73-4586-a58c-9e01bf565948.png)![App 120.png](../../attachments/9e97aeb9-bee5-4255-a7e0-cbc12ce1cc3c.png)
 
 You can also set placement and upload photos when adding or editing an order.
 
-![Routes mob 15.png](../../attachments/6896475c-4bed-414c-8b63-a26f2b38f702.png)![Routes mob 16.png](../../attachments/127e3699-7b8a-4c3d-bd25-e842d47c01ac.png)![Routes mob 17.png](../../attachments/88edbe0e-e3c9-47b4-ad10-11da6194e657.png)
+![App 121.png](../../attachments/3b04c78a-f55e-460d-a1b3-9c3236bb8877.png)![App 122.png](../../attachments/13e7e080-bb7f-412b-bc5f-d51fe4b96663.png)![App 123.png](../../attachments/0781086f-5306-47c3-bee1-0edfbf29ed38.png)![App 124.png](../../attachments/554d5179-c77a-44ab-8d08-d95d0b0a205f.png)
 
 # Navigation
 
-The navigation icon in the top right of Details (of a certain order) page panel lets you jump out to a navigation app (Google Maps, Apple Maps, Waze, etc.) to help you navigate in an unfamiliar area.
+The navigation icon in the top right of Details (of a certain stop) page panel lets you jump out to a navigation app (Google Maps, Apple Maps, Waze, etc.) to help you navigate in an unfamiliar area.
 
-![Routes mob 69.png](../../attachments/057a9956-1be2-4211-91ec-5d3c9ddadc67.png)![Routes mob 70.png](../../attachments/e9f53010-4bf9-47cb-9db9-cbb90a9f15d8.png)
+![App 125.png](../../attachments/ebba79e9-4dcc-4eb4-a267-555600a08404.png)
 
 # Switching Between Stops
 
-You can see navigation arrows on Order details page above the bottom-screen dialog to quickly switch between route stops. These arrows move dynamically with the bottom sheet as it changes height during scrolling. Next to the arrows, the stop numbers of the previous and next stops are displayed, helping you know which stops you can navigate to. The left arrow is hidden on the first stop, and the right arrow is hidden on the last stop, ensuring navigation options are only shown when applicable. If there is only one stop in the route, no arrows are displayed at all.
+You can see navigation arrows on Stop details page above the bottom-screen dialog to quickly switch between route stops. These arrows move dynamically with the bottom sheet as it changes height during scrolling. Next to the arrows, the stop numbers of the previous and next stops are displayed, helping you know which stops you can navigate to. The left arrow is hidden on the first stop, and the right arrow is hidden on the last stop, ensuring navigation options are only shown when applicable. If there is only one stop in the route, no arrows are displayed at all.
 
-![Routes mob 69.png](../../attachments/057a9956-1be2-4211-91ec-5d3c9ddadc67.png)
+![App 127.png](../../attachments/ab403fd7-e0bd-4020-a560-73854627c883.png)![App 126.png](../../attachments/79f9272e-b71f-4d24-bcac-b96393e8af04.png)
 
-# Order Packages
+# Stop Packages
 
-You can add packages to an order in [Hub: Orders](../Web-Based%20Hub/Hub_%20Orders.md).  Pre-defined packages will be then displayed on the Order details page in the mobile app with a barcode, description, height, width, depth, volume, and weight depending on the data provided in [Web-Based Hub](../Web-Based%20Hub.md).
+You can add packages to a stop either in [Hub: Orders](../Web-Based%20Hub/Hub_%20Orders.md)or in the mobile app during adding or editing of a stop.  Packages will be then displayed on the Stop details page in the mobile app with a barcode, description, height, width, depth, volume, and weight depending on the data provided in [Web-Based Hub](../Web-Based%20Hub.md)or in the mobile app.
 
-![Routes mob 79.png](../../attachments/42d83045-fc0b-4956-bb55-a5e7231f217f.png)
+Example when adding packages from the mobile app:
 
-# Order Products
+![App 128.png](../../attachments/3d1d8839-7940-47ff-bfbc-dfdfcb1e0341.png)![App 129.png](../../attachments/7c7a553d-01e2-42b7-9648-efec121c9741.png)![App 130.png](../../attachments/65b6db53-777c-4316-ade2-c43f4d0ae72c.png)
 
-You can add products to an order in [Hub: Orders](../Web-Based%20Hub/Hub_%20Orders.md).  Pre-defined products will be then displayed on the Order details page in the mobile app with a product code, description, quantity, and weight depending on the data provided in [Web-Based Hub](../Web-Based%20Hub.md).
+Example when adding packages from Hub:
 
-![Routes mob 80.png](../../attachments/faa2ff30-4956-4de1-8794-de0d695ac01d.png)
+![Screenshot 2025-12-26 at 14.15.46.png](../../attachments/1f6f7678-de41-47c5-b03e-430c335f256f.png)![App 131.png](../../attachments/278e7521-9b06-4ef4-877a-7646f8972411.png)
 
-# Order Packages with Products
+# Stop Products
 
-You can add packages and products to an order and link them in [Hub: Orders](../Web-Based%20Hub/Hub_%20Orders.md).  Pre-defined packages with products will be then displayed on the Order details page in the mobile app. For a package, a barcode, height, width, depth, volume, and weight can be displayed depending on the data provided in Geo2 Hub. For a product, a product code, description, quantity, and weight can be displayed depending on the data provided in Geo2 Hub. To check products added to a package, press the `Products` button on a package. The list of products added to the package will be displayed. Press `Cross` on the dialog to close it.
+You can add products to a stop in [Hub: Orders](../Web-Based%20Hub/Hub_%20Orders.md).  Pre-defined products will be then displayed on the Stop details page in the mobile app with a product code, description, quantity, and weight depending on the data provided in [Web-Based Hub](../Web-Based%20Hub.md).
 
-![Routes mob 81.png](../../attachments/763a3987-5531-4394-985a-7f0e165434ad.png)![Routes mob 82.png](../../attachments/977f3e3b-5a6e-49d8-a928-8e9660803d50.png)
+![App 132.png](../../attachments/4a73e905-1ba1-4518-8e66-89edd9cca497.png)
+
+# Stop Packages with Products
+
+You can add packages and products to a stop and link them in [Hub: Orders](../Web-Based%20Hub/Hub_%20Orders.md).  Pre-defined packages with products will be then displayed on the Stop details page in the mobile app. For a package, a barcode, height, width, depth, volume, and weight can be displayed depending on the data provided in Geo2 Hub. For a product, a product code, description, quantity, and weight can be displayed depending on the data provided in Geo2 Hub. To check products added to a package, press the `Products` button on a package. The list of products added to the package will be displayed. Press `Cross` on the dialog to close it.
+
+![App 133.png](../../attachments/bbaba95d-ec1a-463e-a83a-be5346a37b45.png)![App 134.png](../../attachments/49a62d9d-d683-4ac5-aeee-31f8e4a7a4c2.png)
 
 # Recording Stop Duration
 
 `Record stop duration` setting in [Hub: Environment Settings](../Web-Based%20Hub/Hub_%20Environment%20Settings.md)enables the mobile app’s feature to record the actual time spent at a stop by a driver.
 
-![Screenshot 2025-08-12 at 11.54.59.png](../../attachments/803e50ed-a3aa-495f-b76f-95f3becb18f7.png)
+![Screenshot 2025-12-26 at 15.04.51.png](../../attachments/fd23d63f-a2ed-4e3f-8225-62255d372172.png)
 
-Once enabled, the `Record arrival` button will appear on Order details page within a route in the mobile app. Tapping it records the arrival time for that stop. The button will then be replaced by `Record departure` and `Create POD` options. You can either generate a proof of delivery (POD) before recording the departure or simply log the departure time without a POD.
+Once enabled, the `Record arrival` button will appear on Stop details page within a route in the mobile app. Tapping it records the arrival time for that stop. The button will then be replaced by `Record departure` option. The Create POD option becomes available once you record arrival. You can either generate a proof of delivery (POD) before recording the departure or simply log the departure time without a POD.
 
-![Routes mob 83.png](../../attachments/21ccff0c-55ec-4503-8f22-6975b9f0ba6e.png)![Routes mob 84.png](../../attachments/d782bd3f-7fe3-452d-b8a2-c9093ebf1e0f.png)
+![App 135.png](../../attachments/dd844997-b47e-4bee-8ae0-a8dc41af0951.png)![App 136.png](../../attachments/5228ad2a-c54a-41b9-8ff3-6c8e44c7dd78.png)
 
-If you press `Record arrival` and then tap the `Back` button to return to Route view page, you will be prompted to confirm whether you want to record the departure time for this stop.
+If you press `Record arrival` and then tap the `close` icon to return to Route view page, you will be prompted to confirm whether you want to record the departure time for this stop.
 
 - Selecting `Yes` will record the departure time.
 - Selecting `No` will keep the stop duration counting, and you will be redirected to Route view page.
-
-![Routes mob 85.png](../../attachments/e15ba2e3-99e0-4624-92f9-2f2ece9865fe.png)
 
 If you pause or complete a route, the departure time for the stop where you pressed `Record arrival` will be recorded automatically. The same applies if you fully close the app.
 
@@ -326,8 +343,6 @@ If you press `Record arrival` at a stop and return to Route view page while the 
 - If none of the selected stops have an ongoing stop duration, you will be asked to confirm whether the departure time for the previous stop should be recorded automatically.
 - If selected stops have an ongoing stop duration and you try to select more stops, you will be asked to confirm whether the departure time for the previous stops should be recorded automatically.
 
-![Routes mob 86.png](../../attachments/3b0b8b3a-5b74-41f5-8f3c-15d0566502d1.png)![Routes mob 87.png](../../attachments/cb8957dd-646a-4275-b086-2a2661ac58f9.png)![Routes mob 89.png](../../attachments/95da7876-6097-4476-b8f8-782ba641ede0.png)![Routes mob 88.png](../../attachments/45d57cf9-bf1a-49d7-9308-1715badfc773.png)
+We allow **overwriting arrival and departure times for stops** when necessary. Once both arrival and departure times are recorded, the actual stop duration is calculated based on the time difference. This duration appears on the stop card on Route view page in Hub, allowing you to compare the planned and actual stop duration and take action when necessary.
 
-We allow **overwriting arrival and departure times for stops** when necessary. Once both arrival and departure times are recorded, the actual stop duration is calculated based on the time difference. This duration appears on the stop card on Route plan page in Hub, allowing you to compare the planned and actual stop duration and take action when necessary.
-
-![Screenshot 2025-08-12 at 12.06.52.png](../../attachments/ea11a523-ea3d-45f1-8c88-a1b67060aa84.png)![Screenshot 2025-08-12 at 12.07.00.png](../../attachments/9e179fe9-f03c-4a78-8f07-b4d309d0ffc4.png)
+![Screenshot 2025-12-26 at 15.18.45.png](../../attachments/712782f9-8ab5-41ea-93d9-e4a65e3864df.png)
